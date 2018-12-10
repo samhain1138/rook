@@ -39,6 +39,7 @@ var (
 func init() {
 	Cmd.AddCommand(operatorCmd)
 	Cmd.AddCommand(sidecarCmd)
+	Cmd.AddCommand(webhookCmd)
 }
 
 func createContext() *clusterd.Context {
