@@ -18,9 +18,9 @@ package util
 
 import (
 	"fmt"
-	cassandrav1alpha1 "github.com/rook/rook/pkg/apis/cassandra.rook.io/v1alpha1"
-	"github.com/rook/rook/pkg/operator/cassandra/constants"
-	"github.com/rook/rook/pkg/operator/k8sutil"
+	cassandrav1alpha1 "github.com/samhain1138/rook/pkg/apis/cassandra.rook.io/v1alpha1"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/constants"
+	"github.com/samhain1138/rook/pkg/operator/k8sutil"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"

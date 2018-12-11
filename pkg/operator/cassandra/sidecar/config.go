@@ -19,9 +19,9 @@ package sidecar
 import (
 	"fmt"
 	"github.com/ghodss/yaml"
-	cassandrav1alpha1 "github.com/rook/rook/pkg/apis/cassandra.rook.io/v1alpha1"
-	"github.com/rook/rook/pkg/operator/cassandra/constants"
-	"github.com/rook/rook/pkg/operator/cassandra/controller/util"
+	cassandrav1alpha1 "github.com/samhain1138/rook/pkg/apis/cassandra.rook.io/v1alpha1"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/constants"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/controller/util"
 	"io/ioutil"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

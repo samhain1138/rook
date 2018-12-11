@@ -18,7 +18,7 @@ package sidecar
 
 import (
 	"fmt"
-	"github.com/rook/rook/pkg/operator/cassandra/constants"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/constants"
 	"github.com/yanniszark/go-nodetool/nodetool"
 	"net/http"
 )

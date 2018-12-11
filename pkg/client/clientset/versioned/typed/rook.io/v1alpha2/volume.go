@@ -19,8 +19,8 @@ limitations under the License.
 package v1alpha2
 
 import (
-	v1alpha2 "github.com/rook/rook/pkg/apis/rook.io/v1alpha2"
-	scheme "github.com/rook/rook/pkg/client/clientset/versioned/scheme"
+	v1alpha2 "github.com/samhain1138/rook/pkg/apis/rook.io/v1alpha2"
+	scheme "github.com/samhain1138/rook/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

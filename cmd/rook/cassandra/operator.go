@@ -18,18 +18,19 @@ package cassandra
 
 import (
 	"fmt"
-	"github.com/rook/rook/cmd/rook/rook"
-	rookinformers "github.com/rook/rook/pkg/client/informers/externalversions"
-	"github.com/rook/rook/pkg/operator/cassandra/constants"
-	"github.com/rook/rook/pkg/operator/cassandra/controller"
-	"github.com/rook/rook/pkg/operator/k8sutil"
-	"github.com/rook/rook/pkg/util/flags"
+	"time"
+
+	"github.com/samhain1138/rook/cmd/rook/rook"
+	rookinformers "github.com/samhain1138/rook/pkg/client/informers/externalversions"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/constants"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/controller"
+	"github.com/samhain1138/rook/pkg/operator/k8sutil"
+	"github.com/samhain1138/rook/pkg/util/flags"
 	"github.com/spf13/cobra"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apiserver/pkg/server"
 	kubeinformers "k8s.io/client-go/informers"
 	"k8s.io/client-go/informers/internalinterfaces"
-	"time"
 )
 
 const resyncPeriod = time.Second * 30
@@ -38,7 +39,7 @@ var operatorCmd = &cobra.Command{
 	Use:   "operator",
 	Short: "Runs the cassandra operator to deploy and manage cassandra in Kubernetes",
 	Long: `Runs the cassandra operator to deploy and manage cassandra in kubernetes clusters.
-https://github.com/rook/rook`,
+https://github.com/samhain1138/rook`,
 }
 
 func init() {

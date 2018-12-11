@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	v1alpha2 "github.com/rook/rook/pkg/apis/rook.io/v1alpha2"
+	v1alpha2 "github.com/samhain1138/rook/pkg/apis/rook.io/v1alpha2"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

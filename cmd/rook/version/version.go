@@ -19,7 +19,7 @@ package version
 import (
 	"fmt"
 
-	"github.com/rook/rook/pkg/version"
+	"github.com/samhain1138/rook/pkg/version"
 	"github.com/spf13/cobra"
 )
 

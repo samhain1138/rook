@@ -18,8 +18,8 @@ package controller
 
 import (
 	"fmt"
-	cassandrav1alpha1 "github.com/rook/rook/pkg/apis/cassandra.rook.io/v1alpha1"
-	"github.com/rook/rook/pkg/operator/cassandra/controller/util"
+	cassandrav1alpha1 "github.com/samhain1138/rook/pkg/apis/cassandra.rook.io/v1alpha1"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/controller/util"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

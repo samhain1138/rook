@@ -26,9 +26,9 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 
-	rookclient "github.com/rook/rook/pkg/client/clientset/versioned"
-	"github.com/rook/rook/pkg/util/flags"
-	"github.com/rook/rook/pkg/version"
+	rookclient "github.com/samhain1138/rook/pkg/client/clientset/versioned"
+	"github.com/samhain1138/rook/pkg/util/flags"
+	"github.com/samhain1138/rook/pkg/version"
 	apiextensionsclient "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 )
 
@@ -45,7 +45,7 @@ var RootCmd = &cobra.Command{
 var (
 	logLevelRaw string
 	Cfg         = &Config{}
-	logger      = capnslog.NewPackageLogger("github.com/rook/rook", "rookcmd")
+	logger      = capnslog.NewPackageLogger("github.com/samhain1138/rook", "rookcmd")
 )
 
 type Config struct {

@@ -18,10 +18,10 @@ package controller
 
 import (
 	"fmt"
-	cassandrav1alpha1 "github.com/rook/rook/pkg/apis/cassandra.rook.io/v1alpha1"
-	"github.com/rook/rook/pkg/operator/cassandra/constants"
-	"github.com/rook/rook/pkg/operator/cassandra/controller/util"
-	casstest "github.com/rook/rook/pkg/operator/cassandra/test"
+	cassandrav1alpha1 "github.com/samhain1138/rook/pkg/apis/cassandra.rook.io/v1alpha1"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/constants"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/controller/util"
+	casstest "github.com/samhain1138/rook/pkg/operator/cassandra/test"
 	"github.com/stretchr/testify/require"
 	appsv1 "k8s.io/api/apps/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

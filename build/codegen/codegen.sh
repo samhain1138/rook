@@ -21,9 +21,9 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd "${scriptdir}/../../vendor/k8s.io/code-generator" && ./generate-groups.sh \
     all \
-    github.com/rook/rook/pkg/client \
-    github.com/rook/rook/pkg/apis \
-    "rook.io:v1alpha2 ceph.rook.io:v1beta1,v1 cockroachdb.rook.io:v1alpha1 minio.rook.io:v1alpha1 nfs.rook.io:v1alpha1 cassandra.rook.io:v1alpha1 edgefs.rook.io:v1alpha1"
+    github.com/samhain1138/rook/pkg/client \
+    github.com/samhain1138/rook/pkg/apis \
+    "rook.io:v1alpha2 cassandra.rook.io:v1alpha1"
 # this seems busted in the release-1.8 branch
 #  --go-header-file ${SCRIPT_ROOT}/build/codegen/header.txt
 

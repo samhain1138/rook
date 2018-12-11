@@ -18,8 +18,8 @@ package sidecar
 
 import (
 	"fmt"
-	"github.com/rook/rook/pkg/operator/cassandra/constants"
-	"github.com/rook/rook/pkg/operator/cassandra/controller/util"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/constants"
+	"github.com/samhain1138/rook/pkg/operator/cassandra/controller/util"
 	"github.com/yanniszark/go-nodetool/nodetool"
 	"k8s.io/api/core/v1"
 )

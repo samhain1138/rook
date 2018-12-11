@@ -51,14 +51,14 @@ SERVER_PLATFORMS := $(filter linux_%,$(PLATFORMS))
 CLIENT_PLATFORMS := $(filter-out linux_%,$(PLATFORMS))
 
 # server projects that we build on server platforms
-SERVER_PACKAGES = $(GO_PROJECT)/cmd/rook $(GO_PROJECT)/cmd/rookflex
+SERVER_PACKAGES = $(GO_PROJECT)/cmd/rook # $(GO_PROJECT)/cmd/rookflex
 
 # tests packages that will be compiled into binaries
-TEST_PACKAGES = $(GO_PROJECT)/tests/integration
-LONGHAUL_TEST_PACKAGES = $(GO_PROJECT)/tests/longhaul
+#TEST_PACKAGES = $(GO_PROJECT)/tests/integration
+#LONGHAUL_TEST_PACKAGES = $(GO_PROJECT)/tests/longhaul
 
 # the root go project
-GO_PROJECT=github.com/rook/rook
+GO_PROJECT=github.com/samhain1138/rook
 
 # inject the version number into the golang version package using the -X linker flag
 LDFLAGS += -X $(GO_PROJECT)/pkg/version.Version=$(VERSION)
@@ -79,8 +79,8 @@ GO_BUILDFLAGS=$(BUILDFLAGS)
 GO_LDFLAGS=$(LDFLAGS)
 GO_TAGS=$(TAGS)
 
-GO_TEST_PACKAGES=$(TEST_PACKAGES)
-GO_LONGHAUL_TEST_PACKAGES=$(LONGHAUL_TEST_PACKAGES)
+#GO_TEST_PACKAGES=$(TEST_PACKAGES)
+#GO_LONGHAUL_TEST_PACKAGES=$(LONGHAUL_TEST_PACKAGES)
 GO_TEST_FLAGS=$(TESTFLAGS)
 GO_TEST_SUITE=$(SUITE)
 GO_TEST_FILTER=$(TESTFILTER)
@@ -124,8 +124,8 @@ install: build.common
 check test:
 	@$(MAKE) go.test.unit
 
-test-integration:
-	@$(MAKE) go.test.integration
+# test-integration:
+# 	@$(MAKE) go.test.integration
 
 lint:
 	@$(MAKE) go.init

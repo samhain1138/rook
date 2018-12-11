@@ -15,7 +15,7 @@
 # limitations under the License.
 
 BUILD_HOST=$(hostname)
-BUILD_REPO=github.com/rook/rook
+BUILD_REPO=github.com/samhain1138/rook
 BUILD_ROOT=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd -P)
 BUILD_REGISTRY=build-$(echo ${BUILD_HOST}-${BUILD_ROOT} | shasum -a 256 | cut -c1-8)
 

@@ -17,9 +17,9 @@ limitations under the License.
 package controller
 
 import (
-	rookfake "github.com/rook/rook/pkg/client/clientset/versioned/fake"
-	rookScheme "github.com/rook/rook/pkg/client/clientset/versioned/scheme"
-	rookinformers "github.com/rook/rook/pkg/client/informers/externalversions"
+	rookfake "github.com/samhain1138/rook/pkg/client/clientset/versioned/fake"
+	rookScheme "github.com/samhain1138/rook/pkg/client/clientset/versioned/scheme"
+	rookinformers "github.com/samhain1138/rook/pkg/client/informers/externalversions"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	kubeinformers "k8s.io/client-go/informers"

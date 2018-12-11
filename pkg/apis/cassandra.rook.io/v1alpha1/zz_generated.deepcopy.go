@@ -21,7 +21,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	v1alpha2 "github.com/rook/rook/pkg/apis/rook.io/v1alpha2"
+	v1alpha2 "github.com/samhain1138/rook/pkg/apis/rook.io/v1alpha2"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
 

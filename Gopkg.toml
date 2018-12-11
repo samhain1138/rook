@@ -29,13 +29,13 @@ required = [
     ]
 
 ignored = [
-    "github.com/rook/rook/.cache",
-    "github.com/rook/rook/.work",
-    "github.com/rook/rook/Documentation",
-    "github.com/rook/rook/_output",
-    "github.com/rook/rook/build",
-    "github.com/rook/rook/cluster",
-    "github.com/rook/rook/images"
+    "github.com/samhain1138/rook/.cache",
+    "github.com/samhain1138/rook/.work",
+    "github.com/samhain1138/rook/Documentation",
+    "github.com/samhain1138/rook/_output",
+    "github.com/samhain1138/rook/build",
+    "github.com/samhain1138/rook/cluster",
+    "github.com/samhain1138/rook/images"
     ]
 
 [prune]

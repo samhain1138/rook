@@ -35,7 +35,7 @@
   revision = "de5bf2ad457846296e2031421a34e2568e304e35"
 
 [[projects]]
-  digest = "1:35768db37daed3f5e0535a68e7dba84dc60ad2a8cedb371e4862b25fc043c243"
+  digest = "1:f6c5e66e3ef4aba538e5e71e23a975df703b28ef2a07519cbdbf1bc4f0ca14aa"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -47,6 +47,7 @@
     "aws/credentials",
     "aws/credentials/ec2rolecreds",
     "aws/credentials/endpointcreds",
+    "aws/credentials/processcreds",
     "aws/credentials/stscreds",
     "aws/csm",
     "aws/defaults",
@@ -73,8 +74,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "ceab7b7ac6f535d1397f124620720b5145f1ad59"
-  version = "v1.15.88"
+  revision = "c4e0e593d5f18b478f17ff0e86b56d41a70ced2d"
+  version = "v1.16.2"
 
 [[projects]]
   branch = "master"
@@ -194,28 +195,12 @@
   version = "v4.1.0"
 
 [[projects]]
-  digest = "1:abeb38ade3f32a92943e5be54f55ed6d6e3b6602761d74b4aab4c9dd45c18abd"
-  name = "github.com/fsnotify/fsnotify"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
-  version = "v1.4.7"
-
-[[projects]]
   digest = "1:2cd7915ab26ede7d95b8749e6b1f933f1c6d5398030684e6505940a10f31cfda"
   name = "github.com/ghodss/yaml"
   packages = ["."]
   pruneopts = "UT"
   revision = "0ca9ea5df5451ffdf184b4428c902747c2c11cd7"
   version = "v1.0.0"
-
-[[projects]]
-  digest = "1:15e27372d379b45b18ac917b9dafc45c45485239490ece18cca97a12f9591146"
-  name = "github.com/go-ini/ini"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "9c8236e659b76e87bf02044d06fde8683008ff3e"
-  version = "v1.39.0"
 
 [[projects]]
   digest = "1:953a2628e4c5c72856b53f5470ed5e071c55eccf943d798d42908102af2a610f"
@@ -399,11 +384,11 @@
   revision = "82859aed1b5dafbbe6ad4f3dac5404d2a742cf18"
 
 [[projects]]
-  digest = "1:e22af8c7518e1eab6f2eab2b7d7558927f816262586cd6ed9f349c97a6c285c4"
+  digest = "1:bb81097a5b62634f3e9fec1014657855610c82d19b9a40c17612e32651e35dca"
   name = "github.com/jmespath/go-jmespath"
   packages = ["."]
   pruneopts = "UT"
-  revision = "0b12d6b5"
+  revision = "c2b33e84"
 
 [[projects]]
   digest = "1:3e551bbb3a7c0ab2a2bf4660e7fcad16db089fdcfbb44b0199e62838038623ea"
@@ -532,25 +517,6 @@
   ]
   pruneopts = "UT"
   revision = "aa55a523dc0a8297edf51bb75e8eec13eb3be45d"
-
-[[projects]]
-  branch = "master"
-  digest = "1:288027e71d1141c5dfa68ae0abf1ff120df4e1b427ff27dd54aa3357349fc4fb"
-  name = "github.com/rook/operator-kit"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "3a90049568e908f071d810b17fa3dfcf2b78b013"
-
-[[projects]]
-  digest = "1:6a4a11ba764a56d2758899ec6f3848d24698d48442ebce85ee7a3f63284526cd"
-  name = "github.com/spf13/afero"
-  packages = [
-    ".",
-    "mem",
-  ]
-  pruneopts = "UT"
-  revision = "d40851caa0d747393da1ffb28f7f9d8b4eeffebd"
-  version = "v1.1.2"
 
 [[projects]]
   digest = "1:645cabccbb4fa8aab25a956cbcbdf6a6845ca736b2c64e197ca7cbb9d210b939"
@@ -965,7 +931,7 @@
   version = "kubernetes-1.11.3"
 
 [[projects]]
-  digest = "1:8f55e66a9679e0dc3d2c6211bfb60ec594a73461f23748b034b9a5940978ca22"
+  digest = "1:60e1a7e7f8653d6dcb50ed8743c2b9f2d96c5af7aa3496e7c97fc5bc8db06527"
   name = "k8s.io/client-go"
   packages = [
     "discovery",
@@ -1107,7 +1073,6 @@
     "testing",
     "tools/auth",
     "tools/cache",
-    "tools/cache/testing",
     "tools/clientcmd",
     "tools/clientcmd/api",
     "tools/clientcmd/api/latest",
@@ -1186,7 +1151,7 @@
   revision = "0317810137be915b9cf888946c6e115c1bfac693"
 
 [[projects]]
-  digest = "1:4c49ed4596ab078e17096f7cdf1d8253f4a562b3a7b9c613d992ef964fef2e84"
+  digest = "1:0f363bd1a125df2a4e7073381fde2b37e3214a01a1c6be8517b69c43afd809c9"
   name = "k8s.io/kubernetes"
   packages = [
     "pkg/api/legacyscheme",
@@ -1194,7 +1159,6 @@
     "pkg/api/v1/endpoints",
     "pkg/api/v1/pod",
     "pkg/apis/autoscaling",
-    "pkg/apis/componentconfig",
     "pkg/apis/core",
     "pkg/apis/core/helper",
     "pkg/apis/core/install",
@@ -1208,7 +1172,6 @@
     "pkg/apis/scheduling",
     "pkg/apis/storage/v1/util",
     "pkg/capabilities",
-    "pkg/cloudprovider",
     "pkg/controller",
     "pkg/controller/endpoint",
     "pkg/features",
@@ -1224,39 +1187,17 @@
     "pkg/security/apparmor",
     "pkg/serviceaccount",
     "pkg/util/file",
-    "pkg/util/filesystem",
-    "pkg/util/goroutinemap",
-    "pkg/util/goroutinemap/exponentialbackoff",
     "pkg/util/hash",
-    "pkg/util/io",
     "pkg/util/metrics",
-    "pkg/util/mount",
     "pkg/util/net/sets",
-    "pkg/util/nsenter",
     "pkg/util/parsers",
     "pkg/util/pointer",
-    "pkg/util/strings",
     "pkg/util/taints",
     "pkg/util/version",
-    "pkg/volume",
-    "pkg/volume/flexvolume",
-    "pkg/volume/util",
-    "pkg/volume/util/fs",
-    "pkg/volume/util/recyclerclient",
-    "pkg/volume/util/types",
-    "pkg/volume/util/volumepathhandler",
   ]
   pruneopts = "UT"
   revision = "a4529464e4629c21224b3d52edfe0ea91b072862"
   version = "v1.11.3"
-
-[[projects]]
-  branch = "master"
-  digest = "1:381323c2fe2e890a3dd3b5d6dc6f2199068408cca89b24f6b7ca1c60f32644a5"
-  name = "k8s.io/utils"
-  packages = ["exec"]
-  pruneopts = "UT"
-  revision = "0d26856f57b32ec3398579285e5c8a2bfe8c5243"
 
 [solve-meta]
   analyzer-name = "dep"
@@ -1269,13 +1210,10 @@
     "github.com/coreos/pkg/capnslog",
     "github.com/davecgh/go-spew/spew",
     "github.com/ghodss/yaml",
-    "github.com/go-ini/ini",
     "github.com/go-sql-driver/mysql",
-    "github.com/golang/glog",
     "github.com/google/uuid",
     "github.com/icrowley/fake",
     "github.com/jbw976/go-ps",
-    "github.com/rook/operator-kit",
     "github.com/spf13/cobra",
     "github.com/spf13/pflag",
     "github.com/stretchr/testify/assert",
@@ -1283,20 +1221,13 @@
     "github.com/stretchr/testify/suite",
     "github.com/yanniszark/go-nodetool/nodetool",
     "k8s.io/api/apps/v1",
-    "k8s.io/api/apps/v1beta1",
-    "k8s.io/api/apps/v1beta2",
     "k8s.io/api/batch/v1",
     "k8s.io/api/core/v1",
     "k8s.io/api/extensions/v1beta1",
-    "k8s.io/api/policy/v1beta1",
-    "k8s.io/api/storage/v1",
-    "k8s.io/api/storage/v1beta1",
-    "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1",
     "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset",
     "k8s.io/apimachinery/pkg/api/errors",
     "k8s.io/apimachinery/pkg/api/resource",
     "k8s.io/apimachinery/pkg/apis/meta/v1",
-    "k8s.io/apimachinery/pkg/fields",
     "k8s.io/apimachinery/pkg/labels",
     "k8s.io/apimachinery/pkg/runtime",
     "k8s.io/apimachinery/pkg/runtime/schema",
@@ -1306,7 +1237,6 @@
     "k8s.io/apimachinery/pkg/util/intstr",
     "k8s.io/apimachinery/pkg/util/runtime",
     "k8s.io/apimachinery/pkg/util/strategicpatch",
-    "k8s.io/apimachinery/pkg/util/uuid",
     "k8s.io/apimachinery/pkg/util/validation",
     "k8s.io/apimachinery/pkg/util/wait",
     "k8s.io/apimachinery/pkg/watch",
@@ -1321,28 +1251,20 @@
     "k8s.io/client-go/kubernetes/fake",
     "k8s.io/client-go/kubernetes/scheme",
     "k8s.io/client-go/kubernetes/typed/core/v1",
-    "k8s.io/client-go/kubernetes/typed/core/v1/fake",
     "k8s.io/client-go/listers/apps/v1",
     "k8s.io/client-go/listers/core/v1",
     "k8s.io/client-go/rest",
     "k8s.io/client-go/testing",
     "k8s.io/client-go/tools/cache",
-    "k8s.io/client-go/tools/cache/testing",
     "k8s.io/client-go/tools/record",
-    "k8s.io/client-go/tools/reference",
     "k8s.io/client-go/util/flowcontrol",
     "k8s.io/client-go/util/workqueue",
     "k8s.io/code-generator/cmd/client-gen",
-    "k8s.io/kubernetes/pkg/apis/componentconfig",
     "k8s.io/kubernetes/pkg/apis/core/v1/helper",
     "k8s.io/kubernetes/pkg/apis/storage/v1/util",
     "k8s.io/kubernetes/pkg/controller/endpoint",
     "k8s.io/kubernetes/pkg/kubelet/apis",
-    "k8s.io/kubernetes/pkg/util/goroutinemap",
-    "k8s.io/kubernetes/pkg/util/mount",
     "k8s.io/kubernetes/pkg/util/version",
-    "k8s.io/kubernetes/pkg/volume/flexvolume",
-    "k8s.io/kubernetes/pkg/volume/util",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

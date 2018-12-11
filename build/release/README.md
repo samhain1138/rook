@@ -33,7 +33,7 @@ The maintainers have the responsibility of ensuring this criteria is met.
   * Helm is used to verify the charts can deploy supported operators and storage providers.
 * Automated Testing
   * Latest build from master is Green with unit tests and integration tests succeeding for the full test matrix.
-  * Future item: Longhaul testing has been run successfully with no issues for a period of at least 48 hours.  This requires [#1847](https://github.com/rook/rook/issues/1847) to be resolved.
+  * Future item: Longhaul testing has been run successfully with no issues for a period of at least 48 hours.  This requires [#1847](https://github.com/samhain1138/rook/issues/1847) to be resolved.
 * Upgrade
   * The upgrade guide is fully walked through with all optional components from the previous **official release** to the release candidate in master, using a multi-node cluster with devices, directories, and provider specific settings.
 * Sign-off
@@ -48,14 +48,14 @@ The Jenkins `release/tag` takes as input the version number to be released and t
 The job will will automatically tag the release and create the release branch.
 Once a new release branch is created or update, jenkins should perform the final release build as part of the `rook/rook` pipeline as usual.
 
-The release branch is not by default created as "protected", so remember to go to the [branch settings](https://github.com/rook/rook/settings/branches) and mark it as "protected".
+The release branch is not by default created as "protected", so remember to go to the [branch settings](https://github.com/samhain1138/rook/settings/branches) and mark it as "protected".
 The protection settings should be similar to that of the previous release branches.
 
 ## Authoring release notes
 Every release should have comprehensive and well written release notes published.
 While work is ongoing for a milestone, contributors should be keeping the [pending release notes](/PendingReleaseNotes.md) up to date, so that should be used as a starting point.
 
-When the release is nearing completion, start a new release "draft" by going to https://github.com/rook/rook/releases/new and start with the content from the pending release notes.
+When the release is nearing completion, start a new release "draft" by going to https://github.com/samhain1138/rook/releases/new and start with the content from the pending release notes.
 Fill in the rest of the sections to fully capture the themes, accomplishments and caveats for the release.
 
 Ensure that you only click `Save draft` until the release is complete, after which you can then click `Publish release` to make them public.

@@ -18,9 +18,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/rook/rook/cmd/rook/cassandra"
-	rook "github.com/rook/rook/cmd/rook/rook"
-	"github.com/rook/rook/cmd/rook/version"
+	"github.com/samhain1138/rook/cmd/rook/cassandra"
+	rook "github.com/samhain1138/rook/cmd/rook/rook"
+	"github.com/samhain1138/rook/cmd/rook/version"
 )
 
 func main() {

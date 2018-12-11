@@ -23,15 +23,10 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/rook/rook/pkg/client/clientset/versioned"
-	cassandrarookio "github.com/rook/rook/pkg/client/informers/externalversions/cassandra.rook.io"
-	cephrookio "github.com/rook/rook/pkg/client/informers/externalversions/ceph.rook.io"
-	cockroachdbrookio "github.com/rook/rook/pkg/client/informers/externalversions/cockroachdb.rook.io"
-	edgefsrookio "github.com/rook/rook/pkg/client/informers/externalversions/edgefs.rook.io"
-	internalinterfaces "github.com/rook/rook/pkg/client/informers/externalversions/internalinterfaces"
-	miniorookio "github.com/rook/rook/pkg/client/informers/externalversions/minio.rook.io"
-	nfsrookio "github.com/rook/rook/pkg/client/informers/externalversions/nfs.rook.io"
-	rookio "github.com/rook/rook/pkg/client/informers/externalversions/rook.io"
+	versioned "github.com/samhain1138/rook/pkg/client/clientset/versioned"
+	cassandrarookio "github.com/samhain1138/rook/pkg/client/informers/externalversions/cassandra.rook.io"
+	internalinterfaces "github.com/samhain1138/rook/pkg/client/informers/externalversions/internalinterfaces"
+	rookio "github.com/samhain1138/rook/pkg/client/informers/externalversions/rook.io"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -179,36 +174,11 @@ type SharedInformerFactory interface {
 	WaitForCacheSync(stopCh <-chan struct{}) map[reflect.Type]bool
 
 	Cassandra() cassandrarookio.Interface
-	Ceph() cephrookio.Interface
-	Cockroachdb() cockroachdbrookio.Interface
-	Edgefs() edgefsrookio.Interface
-	Minio() miniorookio.Interface
-	Nfs() nfsrookio.Interface
 	Rook() rookio.Interface
 }
 
 func (f *sharedInformerFactory) Cassandra() cassandrarookio.Interface {
 	return cassandrarookio.New(f, f.namespace, f.tweakListOptions)
-}
-
-func (f *sharedInformerFactory) Ceph() cephrookio.Interface {
-	return cephrookio.New(f, f.namespace, f.tweakListOptions)
-}
-
-func (f *sharedInformerFactory) Cockroachdb() cockroachdbrookio.Interface {
-	return cockroachdbrookio.New(f, f.namespace, f.tweakListOptions)
-}
-
-func (f *sharedInformerFactory) Edgefs() edgefsrookio.Interface {
-	return edgefsrookio.New(f, f.namespace, f.tweakListOptions)
-}
-
-func (f *sharedInformerFactory) Minio() miniorookio.Interface {
-	return miniorookio.New(f, f.namespace, f.tweakListOptions)
-}
-
-func (f *sharedInformerFactory) Nfs() nfsrookio.Interface {
-	return nfsrookio.New(f, f.namespace, f.tweakListOptions)
 }
 
 func (f *sharedInformerFactory) Rook() rookio.Interface {

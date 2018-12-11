@@ -21,10 +21,10 @@ package v1alpha1
 import (
 	time "time"
 
-	cassandrarookiov1alpha1 "github.com/rook/rook/pkg/apis/cassandra.rook.io/v1alpha1"
-	versioned "github.com/rook/rook/pkg/client/clientset/versioned"
-	internalinterfaces "github.com/rook/rook/pkg/client/informers/externalversions/internalinterfaces"
-	v1alpha1 "github.com/rook/rook/pkg/client/listers/cassandra.rook.io/v1alpha1"
+	cassandrarookiov1alpha1 "github.com/samhain1138/rook/pkg/apis/cassandra.rook.io/v1alpha1"
+	versioned "github.com/samhain1138/rook/pkg/client/clientset/versioned"
+	internalinterfaces "github.com/samhain1138/rook/pkg/client/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/samhain1138/rook/pkg/client/listers/cassandra.rook.io/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"

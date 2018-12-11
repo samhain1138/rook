@@ -19,14 +19,8 @@ limitations under the License.
 package versioned
 
 import (
-	cassandrav1alpha1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/cassandra.rook.io/v1alpha1"
-	cephv1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/ceph.rook.io/v1"
-	cephv1beta1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/ceph.rook.io/v1beta1"
-	cockroachdbv1alpha1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/cockroachdb.rook.io/v1alpha1"
-	edgefsv1alpha1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/edgefs.rook.io/v1alpha1"
-	miniov1alpha1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/minio.rook.io/v1alpha1"
-	nfsv1alpha1 "github.com/rook/rook/pkg/client/clientset/versioned/typed/nfs.rook.io/v1alpha1"
-	rookv1alpha2 "github.com/rook/rook/pkg/client/clientset/versioned/typed/rook.io/v1alpha2"
+	cassandrav1alpha1 "github.com/samhain1138/rook/pkg/client/clientset/versioned/typed/cassandra.rook.io/v1alpha1"
+	rookv1alpha2 "github.com/samhain1138/rook/pkg/client/clientset/versioned/typed/rook.io/v1alpha2"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
@@ -37,22 +31,6 @@ type Interface interface {
 	CassandraV1alpha1() cassandrav1alpha1.CassandraV1alpha1Interface
 	// Deprecated: please explicitly pick a version if possible.
 	Cassandra() cassandrav1alpha1.CassandraV1alpha1Interface
-	CephV1beta1() cephv1beta1.CephV1beta1Interface
-	CephV1() cephv1.CephV1Interface
-	// Deprecated: please explicitly pick a version if possible.
-	Ceph() cephv1.CephV1Interface
-	CockroachdbV1alpha1() cockroachdbv1alpha1.CockroachdbV1alpha1Interface
-	// Deprecated: please explicitly pick a version if possible.
-	Cockroachdb() cockroachdbv1alpha1.CockroachdbV1alpha1Interface
-	EdgefsV1alpha1() edgefsv1alpha1.EdgefsV1alpha1Interface
-	// Deprecated: please explicitly pick a version if possible.
-	Edgefs() edgefsv1alpha1.EdgefsV1alpha1Interface
-	MinioV1alpha1() miniov1alpha1.MinioV1alpha1Interface
-	// Deprecated: please explicitly pick a version if possible.
-	Minio() miniov1alpha1.MinioV1alpha1Interface
-	NfsV1alpha1() nfsv1alpha1.NfsV1alpha1Interface
-	// Deprecated: please explicitly pick a version if possible.
-	Nfs() nfsv1alpha1.NfsV1alpha1Interface
 	RookV1alpha2() rookv1alpha2.RookV1alpha2Interface
 	// Deprecated: please explicitly pick a version if possible.
 	Rook() rookv1alpha2.RookV1alpha2Interface
@@ -62,14 +40,8 @@ type Interface interface {
 // version included in a Clientset.
 type Clientset struct {
 	*discovery.DiscoveryClient
-	cassandraV1alpha1   *cassandrav1alpha1.CassandraV1alpha1Client
-	cephV1beta1         *cephv1beta1.CephV1beta1Client
-	cephV1              *cephv1.CephV1Client
-	cockroachdbV1alpha1 *cockroachdbv1alpha1.CockroachdbV1alpha1Client
-	edgefsV1alpha1      *edgefsv1alpha1.EdgefsV1alpha1Client
-	minioV1alpha1       *miniov1alpha1.MinioV1alpha1Client
-	nfsV1alpha1         *nfsv1alpha1.NfsV1alpha1Client
-	rookV1alpha2        *rookv1alpha2.RookV1alpha2Client
+	cassandraV1alpha1 *cassandrav1alpha1.CassandraV1alpha1Client
+	rookV1alpha2      *rookv1alpha2.RookV1alpha2Client
 }
 
 // CassandraV1alpha1 retrieves the CassandraV1alpha1Client
@@ -81,66 +53,6 @@ func (c *Clientset) CassandraV1alpha1() cassandrav1alpha1.CassandraV1alpha1Inter
 // Please explicitly pick a version.
 func (c *Clientset) Cassandra() cassandrav1alpha1.CassandraV1alpha1Interface {
 	return c.cassandraV1alpha1
-}
-
-// CephV1beta1 retrieves the CephV1beta1Client
-func (c *Clientset) CephV1beta1() cephv1beta1.CephV1beta1Interface {
-	return c.cephV1beta1
-}
-
-// CephV1 retrieves the CephV1Client
-func (c *Clientset) CephV1() cephv1.CephV1Interface {
-	return c.cephV1
-}
-
-// Deprecated: Ceph retrieves the default version of CephClient.
-// Please explicitly pick a version.
-func (c *Clientset) Ceph() cephv1.CephV1Interface {
-	return c.cephV1
-}
-
-// CockroachdbV1alpha1 retrieves the CockroachdbV1alpha1Client
-func (c *Clientset) CockroachdbV1alpha1() cockroachdbv1alpha1.CockroachdbV1alpha1Interface {
-	return c.cockroachdbV1alpha1
-}
-
-// Deprecated: Cockroachdb retrieves the default version of CockroachdbClient.
-// Please explicitly pick a version.
-func (c *Clientset) Cockroachdb() cockroachdbv1alpha1.CockroachdbV1alpha1Interface {
-	return c.cockroachdbV1alpha1
-}
-
-// EdgefsV1alpha1 retrieves the EdgefsV1alpha1Client
-func (c *Clientset) EdgefsV1alpha1() edgefsv1alpha1.EdgefsV1alpha1Interface {
-	return c.edgefsV1alpha1
-}
-
-// Deprecated: Edgefs retrieves the default version of EdgefsClient.
-// Please explicitly pick a version.
-func (c *Clientset) Edgefs() edgefsv1alpha1.EdgefsV1alpha1Interface {
-	return c.edgefsV1alpha1
-}
-
-// MinioV1alpha1 retrieves the MinioV1alpha1Client
-func (c *Clientset) MinioV1alpha1() miniov1alpha1.MinioV1alpha1Interface {
-	return c.minioV1alpha1
-}
-
-// Deprecated: Minio retrieves the default version of MinioClient.
-// Please explicitly pick a version.
-func (c *Clientset) Minio() miniov1alpha1.MinioV1alpha1Interface {
-	return c.minioV1alpha1
-}
-
-// NfsV1alpha1 retrieves the NfsV1alpha1Client
-func (c *Clientset) NfsV1alpha1() nfsv1alpha1.NfsV1alpha1Interface {
-	return c.nfsV1alpha1
-}
-
-// Deprecated: Nfs retrieves the default version of NfsClient.
-// Please explicitly pick a version.
-func (c *Clientset) Nfs() nfsv1alpha1.NfsV1alpha1Interface {
-	return c.nfsV1alpha1
 }
 
 // RookV1alpha2 retrieves the RookV1alpha2Client
@@ -174,30 +86,6 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 	if err != nil {
 		return nil, err
 	}
-	cs.cephV1beta1, err = cephv1beta1.NewForConfig(&configShallowCopy)
-	if err != nil {
-		return nil, err
-	}
-	cs.cephV1, err = cephv1.NewForConfig(&configShallowCopy)
-	if err != nil {
-		return nil, err
-	}
-	cs.cockroachdbV1alpha1, err = cockroachdbv1alpha1.NewForConfig(&configShallowCopy)
-	if err != nil {
-		return nil, err
-	}
-	cs.edgefsV1alpha1, err = edgefsv1alpha1.NewForConfig(&configShallowCopy)
-	if err != nil {
-		return nil, err
-	}
-	cs.minioV1alpha1, err = miniov1alpha1.NewForConfig(&configShallowCopy)
-	if err != nil {
-		return nil, err
-	}
-	cs.nfsV1alpha1, err = nfsv1alpha1.NewForConfig(&configShallowCopy)
-	if err != nil {
-		return nil, err
-	}
 	cs.rookV1alpha2, err = rookv1alpha2.NewForConfig(&configShallowCopy)
 	if err != nil {
 		return nil, err
@@ -215,12 +103,6 @@ func NewForConfig(c *rest.Config) (*Clientset, error) {
 func NewForConfigOrDie(c *rest.Config) *Clientset {
 	var cs Clientset
 	cs.cassandraV1alpha1 = cassandrav1alpha1.NewForConfigOrDie(c)
-	cs.cephV1beta1 = cephv1beta1.NewForConfigOrDie(c)
-	cs.cephV1 = cephv1.NewForConfigOrDie(c)
-	cs.cockroachdbV1alpha1 = cockroachdbv1alpha1.NewForConfigOrDie(c)
-	cs.edgefsV1alpha1 = edgefsv1alpha1.NewForConfigOrDie(c)
-	cs.minioV1alpha1 = miniov1alpha1.NewForConfigOrDie(c)
-	cs.nfsV1alpha1 = nfsv1alpha1.NewForConfigOrDie(c)
 	cs.rookV1alpha2 = rookv1alpha2.NewForConfigOrDie(c)
 
 	cs.DiscoveryClient = discovery.NewDiscoveryClientForConfigOrDie(c)
@@ -231,12 +113,6 @@ func NewForConfigOrDie(c *rest.Config) *Clientset {
 func New(c rest.Interface) *Clientset {
 	var cs Clientset
 	cs.cassandraV1alpha1 = cassandrav1alpha1.New(c)
-	cs.cephV1beta1 = cephv1beta1.New(c)
-	cs.cephV1 = cephv1.New(c)
-	cs.cockroachdbV1alpha1 = cockroachdbv1alpha1.New(c)
-	cs.edgefsV1alpha1 = edgefsv1alpha1.New(c)
-	cs.minioV1alpha1 = miniov1alpha1.New(c)
-	cs.nfsV1alpha1 = nfsv1alpha1.New(c)
 	cs.rookV1alpha2 = rookv1alpha2.New(c)
 
 	cs.DiscoveryClient = discovery.NewDiscoveryClient(c)

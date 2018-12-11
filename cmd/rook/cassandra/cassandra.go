@@ -18,10 +18,10 @@ package cassandra
 
 import (
 	"github.com/coreos/pkg/capnslog"
-	"github.com/rook/rook/cmd/rook/rook"
-	"github.com/rook/rook/pkg/clusterd"
-	"github.com/rook/rook/pkg/operator/k8sutil"
-	"github.com/rook/rook/pkg/util/exec"
+	"github.com/samhain1138/rook/cmd/rook/rook"
+	"github.com/samhain1138/rook/pkg/clusterd"
+	"github.com/samhain1138/rook/pkg/operator/k8sutil"
+	"github.com/samhain1138/rook/pkg/util/exec"
 	"github.com/spf13/cobra"
 )
 
@@ -33,7 +33,7 @@ var Cmd = &cobra.Command{
 }
 
 var (
-	logger = capnslog.NewPackageLogger("github.com/rook/rook", "cassandracmd")
+	logger = capnslog.NewPackageLogger("github.com/samhain1138/rook", "cassandracmd")
 )
 
 func init() {

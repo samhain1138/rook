@@ -20,7 +20,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	rookio "github.com/rook/rook/pkg/apis/rook.io"
+	rookio "github.com/samhain1138/rook/pkg/apis/rook.io"
 )
 
 const (
